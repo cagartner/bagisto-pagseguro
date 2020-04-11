@@ -1,0 +1,26 @@
+{
+    "name": "cagartner/bagisto-pagseguro",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Gartner",
+            "email": "contato@carlosgartner.com.br"
+        }
+    ],
+    "require": {
+        "pagseguro/pagseguro-php-sdk": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cagartner\\Pagseguro\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cagartner\\Pagseguro\\Providers\\PagseguroServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
