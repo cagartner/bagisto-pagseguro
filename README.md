@@ -39,7 +39,7 @@ Configurações disponíveis:
 * **Pagseguro Email**: E-mail da conta criada no Pagseguro que irá receber os pagamentos.
 * **Token de Integração**: Token de integração que você deve pegar na sua conta do Pagseguro, [veja mais informações aqui](https://faq.pagseguro.uol.com.br/duvida/como-gerar-token-para-integracao-com-o-site/841#rmcl).
 * **Sandbox**: Permite testar sua loja em modo de testes, quando você tiver pronto para começar a vender de verdade essa opção precisa ser deselecionada.
-* **Status**: Ativa ou desativa o método de entrega
+* **Status**: Ativa ou desativa o método de pagamento
 <!-- * **Quantidade de Parcelas sem Juros**: Quantidade de parcelas que seu cliente poderá comprar sem ter que pagar juros (Você assumirá essas taxas).
 * **Quantidade Máxima de Parcelas**: Quantidade máxima de parcelas que seus clientes poderão parcelar -->
 
