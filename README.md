@@ -2,11 +2,9 @@
 
 Módulo criado para adicionar a opção de meio de pagamento Pagseguro na ferramenta de e-Commerce Bagisto
 
-<!---
-Para maiores informações acesse a página da extenção oficial [clicando aqui](https://bagisto.com/en/extensions/laravel-ecommerce-correios-shipping/)
+Para maiores informações acesse a página da extenção oficial [clicando aqui](https://bagisto.com/en/extensions/laravel-ecommerce-pagseguro-payment-gateway/)
 
-For futher informations [click here](https://bagisto.com/en/extensions/laravel-ecommerce-correios-shipping/)
--->
+For futher informations [click here](https://bagisto.com/en/extensions/laravel-ecommerce-pagseguro-payment-gateway/)
 
 ## Instalação
 
@@ -49,4 +47,7 @@ Se gostou do trabalho e quiser me pagar uma cerveja, pode me fazer uma doação 
 
 Tenho também a opção de checkout transparente, esse método é vendido separadamente, caso tenha interesse entre em contato: contato@carlosgartner.com.br
 
- 
+## Conheça outros Packages para Bagisto
+
+* [Bagisto - PicPay](https://github.com/cagartner/bagisto-picpay)
+* [Bagisto - Correios](https://github.com/cagartner/bagisto-correios)
