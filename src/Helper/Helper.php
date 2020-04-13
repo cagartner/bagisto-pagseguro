@@ -25,7 +25,7 @@ class Helper
     /**
      *
      */
-    const MODULE_VERSION = '1.0.0';
+    const MODULE_VERSION = '1.0.1';
 
     /**
      *

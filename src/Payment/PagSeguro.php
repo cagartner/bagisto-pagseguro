@@ -121,6 +121,7 @@ class PagSeguro extends Payment
         Configure::setCharset('UTF-8');
         Configure::setEnvironment($this->environment);
 
+        /** @var Cart $cart */
         $cart = $this->getCart();
 
         $this->payment = new \PagSeguro\Domains\Requests\Payment();
@@ -222,31 +223,33 @@ class PagSeguro extends Payment
             );
         }
 
-        $addresses = explode(PHP_EOL, $billingAddress->address1);
+        if ($cart->selected_shipping_rate) {
+            $addresses = explode(PHP_EOL, $billingAddress->address1);
 
-        // Add address
-        $this->payment->setShipping()->setAddress()->withParameters(
-            isset($addresses[0]) ? $addresses[0] : null,
-            isset($addresses[1]) ? $addresses[1] : null,
-            isset($addresses[2]) ? $addresses[2] : null,
-            $billingAddress->postcode,
-            $billingAddress->city,
-            $billingAddress->state,
-            $billingAddress->country,
-            isset($addresses[3]) ? $addresses[3] : null
-        );
+            // Add address
+            $this->payment->setShipping()->setAddress()->withParameters(
+                isset($addresses[0]) ? $addresses[0] : null,
+                isset($addresses[1]) ? $addresses[1] : null,
+                isset($addresses[2]) ? $addresses[2] : null,
+                $billingAddress->postcode,
+                $billingAddress->city,
+                $billingAddress->state,
+                $billingAddress->country,
+                isset($addresses[3]) ? $addresses[3] : null
+            );
 
-        // Add Shipping Method
-        $this->payment->setShipping()->setCost()->withParameters($cart->selected_shipping_rate->price);
-        if (Str::contains($cart->selected_shipping_rate->carrier, 'correio')) {
-            if (Str::contains($cart->selected_shipping_rate->method, 'sedex')) {
-                $this->payment->setShipping()->setType()->withParameters(Type::SEDEX);
+            // Add Shipping Method
+            $this->payment->setShipping()->setCost()->withParameters($cart->selected_shipping_rate->price);
+            if (Str::contains($cart->selected_shipping_rate->carrier, 'correio')) {
+                if (Str::contains($cart->selected_shipping_rate->method, 'sedex')) {
+                    $this->payment->setShipping()->setType()->withParameters(Type::SEDEX);
+                }
+                if (Str::contains($cart->selected_shipping_rate->method, 'pac')) {
+                    $this->payment->setShipping()->setType()->withParameters(Type::PAC);
+                }
+            } else {
+                $this->payment->setShipping()->setType()->withParameters(Type::NOT_SPECIFIED);
             }
-            if (Str::contains($cart->selected_shipping_rate->method, 'pac')) {
-                $this->payment->setShipping()->setType()->withParameters(Type::PAC);
-            }
-        } else {
-            $this->payment->setShipping()->setType()->withParameters(Type::NOT_SPECIFIED);
         }
     }
 
