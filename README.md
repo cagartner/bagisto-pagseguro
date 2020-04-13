@@ -22,6 +22,8 @@ protected $except = [
     'pagseguro/*'
 ];
 ```
+ 
+4- Rodar `php artisan config:clear` para limpar as configurações cacheadas.
 
 3- **Para o módulo funcionar corretamente, você deve ativar o serviço de [Pagamentos Via API](https://pagseguro.uol.com.br/integracao/pagamentos-via-api.jhtml), se não for ativado o cliente não irá retornar para a loja e o pagamento não será criado no Bagisto.**
 
