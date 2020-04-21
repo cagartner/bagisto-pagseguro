@@ -53,3 +53,11 @@ Tenho também a opção de checkout transparente, esse método é vendido separa
 
 * [Bagisto - PicPay](https://github.com/cagartner/bagisto-picpay)
 * [Bagisto - Correios](https://github.com/cagartner/bagisto-correios)
+
+## Conheça a comunidade Brasileira de Bagisto
+- [Portal Oficial](https://bagisto.com.br)
+- [Grupo do WhatsApp](https://chat.whatsapp.com/HpMKEoxf5neIfnpUlHGmaO)
+- [Grupo do Facebook](https://www.facebook.com/groups/2552301808420521)
+- [Grupo do Telegram](https://t.me/bagistobrasil)
+- [Twitter](http://twitter.com/bagistobr)
+ 
