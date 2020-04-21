@@ -53,6 +53,7 @@ Tenho também a opção de checkout transparente, esse método é vendido separa
 
 * [Bagisto - PicPay](https://github.com/cagartner/bagisto-picpay)
 * [Bagisto - Correios](https://github.com/cagartner/bagisto-correios)
+* [Bagisto - Campos Brasileiros](https://github.com/cagartner/bagisto-brazilcustomer)
 
 ## Conheça a comunidade Brasileira de Bagisto
 - [Portal Oficial](https://bagisto.com.br)
