@@ -187,11 +187,13 @@ class PagSeguro extends Payment
     }
 
     /**
-     *
+     * Add the customer to the payment request
+     * @param Cart $cart
      */
     public function addCustomer(Cart $cart)
     {
-        $this->payment->setSender()->setName($cart->customer_first_name . ' ' . $cart->customer_last_name);
+        $fullname = $this->fullnameConversion($cart->customer_first_name . ' ' . $cart->customer_last_name);
+        $this->payment->setSender()->setName($fullname);
         $this->payment->setSender()->setEmail($cart->customer_email);
     }
 
@@ -465,5 +467,23 @@ class PagSeguro extends Payment
         curl_close($curl);
 
         return $result;
+    }
+
+    /**
+     * @param $name
+     * @return string
+     */
+    protected function fullnameConversion($name)
+    {
+        $name = preg_replace('/\d/', '', $name);
+        $name = preg_replace('/[\n\t\r]/', ' ', $name);
+        $name = preg_replace('/\s(?=\s)/', '', $name);
+        $name = trim($name);
+        $name = explode(' ', $name);
+        if(count($name) == 1 ) {
+            $name[] = 'dos Santos';
+        }
+        $name = implode(' ', $name);
+        return $name;
     }
 }
