@@ -45,7 +45,7 @@ Configurações disponíveis:
 
 ## Me pague uma cerveja:
 
-Se gostou do trabalho e quiser me pagar uma cerveja, pode me fazer uma doação pelo PicPay: @cagartner
+Se gostou do trabalho e quiser me pagar uma cerveja, pode me fazer uma doação pelo PicPay: [@cagartner](https://picpay.me/cagartner/20.0)
 
 Tenho também a opção de checkout transparente, esse método é vendido separadamente, caso tenha interesse entre em contato: contato@carlosgartner.com.br
 
