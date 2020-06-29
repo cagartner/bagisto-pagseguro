@@ -1,6 +1,8 @@
 <?php
 
-const PAGSEGURO_CONTROLER = 'Cagartner\Pagseguro\Http\Controllers\PagseguroController@';
+if ( ! defined( 'PAGSEGURO_CONTROLER')) {
+    define('PAGSEGURO_CONTROLER', 'Cagartner\Pagseguro\Http\Controllers\PagseguroController@');
+}
 
 Route::group(['middleware' => ['web']], function () {
     Route::prefix('pagseguro')->group(function () {
